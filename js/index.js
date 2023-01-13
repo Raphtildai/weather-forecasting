@@ -1,3 +1,4 @@
+// API parameters
 const options = {
 	method: 'GET',
 	headers: {
@@ -5,7 +6,8 @@ const options = {
 		'X-RapidAPI-Host': 'weather-by-api-ninjas.p.rapidapi.com'
 	}
 };
-
+ 
+// Creating an object
 let weather = {
     fetchWeather: function (city) {
         fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city='+ city +'', options)
@@ -47,18 +49,3 @@ document.querySelector(".search-bar").addEventListener("keyup", function (event)
 
 //Data to be loaded when the page first loads
 weather.fetchWeather("Eldoret");
-
-// pallindrom
-// function isPalindrome(word) {
-//     const length = word.length;
-//     const half = Math.floor(length / 2);
-//     for (let index = 0; index < half; index++) {
-//       if (word[index] !== word[length - index - 1]) {
-//         return false;
-//       }
-//     }
-//     return true;
-//   }
-//   isPalindrome('madam'); // => true
-//   isPalindrome('hello'); // => false
-  
